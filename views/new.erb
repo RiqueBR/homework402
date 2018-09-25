@@ -1,0 +1,24 @@
+<form method="post" action="/pizza-orders">
+  <!-- The method above will send the info to action place i.e. pizza-orders.
+  Post allows you to send data. -->
+  <lable for="first_name">First Name:</label>
+    <input id="first_name" type="text" name="first_name" required/>
+<!--  These name properties (i.e. first_name) have to be the same keyword of your hash-->
+
+
+    <label for="last_name">Last Name:</label>
+    <input for="last_name" type="text" name="last_name" required/>
+
+    <label for="pizza-select">Select a Pizza:</label>
+    <select id="pizza-select" name="topping">
+      <!-- The for in pizza-select must match the id pizza-select -->
+      <option value="Margherita">Margherita</option>
+      <option value="Calzone">Calzone</option>
+    </select>
+
+    <label for="quantity">Quantity:</label>
+    <input id="quantity" type="number" name="quantity" required/>
+
+    <input type="submit" value="Order Pizza"/>
+
+  </form>

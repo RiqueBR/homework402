@@ -1,0 +1,15 @@
+<h1>Bene Pizzas!</h1>
+
+
+<% for order in @orders %>
+  <!-- ice cream cone with flake is for printing out values. -->
+  <!-- this function is looking at the information coming from our array @orders from pizza_orders
+  and giving back the name through the function of pretty_name() -->
+  <p>Name: <%= order.pretty_name() %></p>
+  <p>Order: <%= order.quantity %> <%= order.topping %></p>
+  <!-- Find above the function for quantity and topping, since quanity and
+  toopping are attr_readers, I'm able to call the method in the function above -->
+  <p><a href="/pizza-orders/<%= order.id %>">Show Order</a></p>
+
+
+<% end %>

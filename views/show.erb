@@ -1,0 +1,20 @@
+<h1>This is your pizza order:</h1>
+
+
+<p>First Name: <%= @order.first_name %></p>
+<p>Last Name: <%= @order.last_name %></p>
+<p>Topping: <%= @order.topping %></p>
+<p>Quantity: <%= @order.quantity %></p>
+
+<!-- Because the fuction in the controller asks for a parameter, here we're just
+constructing a reflection of the method previously built. Therefore, we don't need to access
+through creating a function here (i.e. for - each) but rather call it on .first_name for example.-->
+
+
+<form method="post" action="/pizza-orders/<%= @order.id %>/delete">
+  <input type="submit" value="Delete Order"/>
+</form>
+
+<form method="get" action="/pizza-orders/<%= @order.id %>/edit">
+  <input type="submit" value="Edit Order"/>
+</form>
